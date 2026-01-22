@@ -2,16 +2,16 @@ import streamlit as st
 
 st.set_page_config(page_title="Energy Saving Calculator", page_icon="☀️", layout="centered")
 
-st.title("⚡ Energy Saving Calculator for SIP Solar Shelters")
+st.title("⚡ Energy Saving Calculator for SIP Solar Units")
 st.markdown("""
-This tool estimates **energy generation, cost savings, and CO₂ reductions** for your prefabricated SIP shelter with solar panels.
+This tool estimates **energy generation, cost savings, and CO₂ reductions** for your prefabricated SIP unit with solar panels.
 Adjust the parameters to see real-time results.
 """)
 
 # --- Inputs ---
 st.sidebar.header("Input Parameters")
 
-shelter_size = st.sidebar.number_input("Shelter Size (sq ft)", min_value=100, max_value=400, value=200, step=10)
+shelter_size = st.sidebar.number_input("Unit Size (sq ft)", min_value=100, max_value=400, value=200, step=10)
 num_panels = st.sidebar.slider("Number of Solar Panels", 1, 20, 10)
 panel_watt = st.sidebar.number_input("Panel Wattage (W)", min_value=100, max_value=500, value=200)
 sunlight_hours = st.sidebar.slider("Average Sunlight (hrs/day)", 2.0, 8.0, 4.0, 0.5)
@@ -61,8 +61,7 @@ st.markdown("---")
 st.subheader("🏗️ Engineering & Structural Insights")
 st.write(f"- Roof Load from Panels: **{total_weight:.1f} kg** total")
 st.write(f"- Roof Pressure: **{pressure:.1f} kg/m²** (Safe within SIP roof tolerance ≥250–300 kg/m²)")
-st.write(f"- Shelter Size: **{shelter_size} sq ft**, exceeds minimum livable space requirements")
+st.write(f"- Size: **{shelter_size} sq ft**, exceeds minimum livable space requirements")
 
 st.markdown("---")
-st.markdown("✅ *This calculator helps quantify how sustainable and cost-effective your SIP + solar system is in real conditions.*")
 
