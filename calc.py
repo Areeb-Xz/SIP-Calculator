@@ -81,7 +81,6 @@ components.html(
         border: 1.5px solid #d0d0d0;
         border-radius: 12px;
         padding: 10px;
-        background-color: #fafafa;
         max-width: 900px;
         margin: auto;
     ">
