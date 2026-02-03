@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Energy Saving Calculator", page_icon="☀️", layout="centered")
 
@@ -66,5 +67,12 @@ st.write(f"- Size: **{shelter_size} sq ft**, exceeds minimum livable space requi
 st.markdown("---")
 st.subheader("🧱 3D SIP Unit Walkthrough")
 
-with open("assets/demo_video.mp4", "rb") as video_file:
-    st.video(video_file.read())
+components.html(
+    """
+    <video autoplay loop muted playsinline width="100%">
+        <source src="assets/demo_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    """,
+    height=420,
+)
