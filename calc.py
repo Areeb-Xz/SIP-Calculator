@@ -64,4 +64,7 @@ st.write(f"- Roof Pressure: **{pressure:.1f} kg/m²** (Safe within SIP roof tole
 st.write(f"- Size: **{shelter_size} sq ft**, exceeds minimum livable space requirements")
 
 st.markdown("---")
+st.subheader("🧱 3D SIP Unit Walkthrough")
 
+with open("assets/demo_video.mp4", "rb") as video_file:
+    st.video(video_file.read())
