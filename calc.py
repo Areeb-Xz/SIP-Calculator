@@ -76,10 +76,19 @@ with open(video_path, "rb") as f:
     encoded_video = base64.b64encode(video_bytes).decode()
 
 components.html(
-    f"""
-    <video autoplay loop muted playsinline width="100%">
-        <source src="data:video/mp4;base64,{encoded_video}" type="video/mp4">
-    </video>
+    """
+    <div style="
+        border: 1.5px solid #d0d0d0;
+        border-radius: 12px;
+        padding: 10px;
+        background-color: #fafafa;
+        max-width: 900px;
+        margin: auto;
+    ">
+        <video autoplay loop muted playsinline width="100%" style="border-radius: 8px;">
+            <source src="assets/demo_video.mp4" type="video/mp4">
+        </video>
+    </div>
     """,
-    height=420,
+    height=460,
 )
