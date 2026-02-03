@@ -1,6 +1,4 @@
-import base64
 import streamlit as st
-import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Energy Saving Calculator", page_icon="☀️", layout="centered")
 
@@ -67,19 +65,6 @@ st.write(f"- Size: **{shelter_size} sq ft**, exceeds minimum livable space requi
 
 st.markdown("---")
 st.subheader("🧱 3D SIP Unit Walkthrough")
-st.caption("Autoplaying 3D walkthrough of the SIP unit with integrated rooftop solar, modeled in Blender.")
 
-video_path = "assets/demo_video.mp4"
-
-with open(video_path, "rb") as f:
-    video_bytes = f.read()
-    encoded_video = base64.b64encode(video_bytes).decode()
-
-components.html(
-    f"""
-    <video autoplay loop muted playsinline width="100%">
-        <source src="data:video/mp4;base64,{encoded_video}" type="video/mp4">
-    </video>
-    """,
-    height=420,
-)
+with open("assets/demo_video.mp4", "rb") as video_file:
+    st.video(video_file.read())
