@@ -66,6 +66,8 @@ st.write(f"- Size: **{shelter_size} sq ft**, exceeds minimum livable space requi
 
 st.markdown("---")
 st.subheader("🧱 3D SIP Unit Walkthrough")
+st.caption("Autoplaying 3D walkthrough of the SIP unit with integrated rooftop solar, modeled in Blender.")
+
 
 components.html(
     """
